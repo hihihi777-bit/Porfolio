@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NDT — Web Developer | PHP / WordPress</title>
+  <meta name="description" content="Nguyen Duy Tam — Web Developer PHP, WordPress, Laravel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="logo"><span>NDT</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-i18n="nav.home">Trang chủ</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">Giới thiệu</a>
+        <a href="#skills" class="nav-link" data-i18n="nav.skills">Kỹ năng</a>
+        <a href="#experience" class="nav-link" data-i18n="nav.experience">Kinh nghiệm</a>
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Dự án</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Liên hệ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Đổi ngôn ngữ / Switch language">
+          <span id="langLabel">EN</span>
+        </button>
+        <button class="theme-btn" id="themeToggle" aria-label="Đổi giao diện sáng/tối">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Mở menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-hello reveal" data-i18n="hero.hello">Xin chào, mình là</p>
+          <h1 class="hero-name reveal" data-i18n="hero.fullname">Nguyễn Duy Tâm</h1>
+          <h2 class="hero-role reveal">
+            <span id="typed"></span><span class="caret">|</span>
+          </h2>
+          <p class="hero-desc reveal" data-i18n-html="hero.desc">
+            Web Developer <strong>PHP / WordPress / Laravel</strong>.
+            Từng phát triển hệ thống WordPress Multisite, plugin tùy chỉnh và
+            website thương mại điện tử với Laravel.
+          </p>
+          <div class="hero-cta reveal">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-folder-open"></i> <span data-i18n="hero.cta_projects">Xem dự án</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-paper-plane"></i> <span data-i18n="hero.cta_contact">Liên hệ ngay</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="photo-wrap">
+            <img
+              src="img/avt.jpg"
+              alt="Nguyen Duy Tam"
+              class="hero-photo"
+            />
+            <div class="photo-ring"></div>
+            <div class="float-tag tag-1">
+              <i class="fa-solid fa-bolt"></i> <span data-i18n="hero.tag1">Tối ưu tốc độ</span>
+            </div>
+            <div class="float-tag tag-2">
+              <i class="fa-brands fa-wordpress"></i> <span data-i18n="hero.tag2">Plugin WP</span>
+            </div>
+            <div class="float-tag tag-3">
+              <i class="fa-brands fa-laravel"></i> <span data-i18n="hero.tag3">PHP / Laravel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Cuộn xuống">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- GIỚI THIỆU + HỌC VẤN -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-label reveal" data-i18n="about.title">Giới thiệu</h2>
+        <div class="about-grid">
+          <div class="glass-card reveal">
+            <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3 data-i18n="about.goal_title">Mục tiêu nghề nghiệp</h3>
+            <p data-i18n-html="about.goal_short"><strong>Ngắn hạn:</strong> Tìm cơ hội làm việc ở vị trí Web Developer, tham gia các dự án thực tế và nâng cao kiến thức về phát triển, bảo trì và tối ưu website.</p>
+            <p data-i18n-html="about.goal_long"><strong>Dài hạn:</strong> Phát triển nền tảng vững chắc về Backend và trở thành một Developer có khả năng xây dựng, phát triển và tối ưu các hệ thống web bằng PHP, WordPress và Laravel.</p>
+          </div>
+          <div class="glass-card reveal">
+            <div class="card-icon"><i class="fa-solid fa-id-card"></i></div>
+            <h3 data-i18n="about.info_title">Thông tin cá nhân</h3>
+            <ul class="info-list">
+              <li>
+                <span><i class="fa-solid fa-user"></i> <span data-i18n="about.name">Họ tên</span></span>
+                <strong data-i18n="about.fullname" >Nguyễn Duy Tâm</strong>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-cake-candles"></i> <span data-i18n="about.birthday">Ngày sinh</span></span>
+                <strong>07/10/2004</strong>
+              </li>
+              <!-- <li>
+                <span><i class="fa-solid fa-phone"></i> <span data-i18n="about.phone">Điện thoại</span></span>
+                <strong>012345678</strong>
+              </li> -->
+              <li>
+                <span><i class="fa-solid fa-envelope"></i>Email</span>
+                <strong>duytam204@gmail.com</strong>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-location-dot"></i> <span data-i18n="about.address">Quê quán</span></span>
+                <strong data-i18n="about.fulladdress">Quảng Bình</strong>
+              </li>
+              <li>
+                <span><i class="fa-brands fa-github"></i> GitHub</span>
+                <a href="https://github.com/harryy204"  target="_blank" rel="noopener noreferrer" class="github-link"><strong>github.com/harryy204</strong></a>
+              </li>
+            </ul>
+          </div>
+          <div class="glass-card edu-inline reveal">
+            <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="edu-content">
+              <h3 data-i18n="about.edu_title">Học vấn</h3>
+              <p class="edu-school">FPT Polytechnic Đà Nẵng</p>
+              <p class="edu-major" data-i18n="about.edu_major">Chuyên ngành: Lập trình Web</p>
+              <p class="edu-time"><i class="fa-regular fa-calendar"></i> 20/08/2022 – 09/01/2025</p>
+              <span class="gpa-badge">GPA: 3.71/4.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KỸ NĂNG -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-label reveal" data-i18n="skills.title">Kỹ năng</h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <h3 data-i18n="skills.lang">Ngôn ngữ</h3>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3 data-i18n="skills.framework">Framework & CMS</h3>
+            <div class="tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">WordPress</span>
+              <span class="tag">Elementor</span>
+              <span class="tag">Flatsome</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-brands fa-wordpress"></i></div>
+            <h3 data-i18n="skills.wp">WordPress</h3>
+            <div class="tags">
+              <span class="tag">Plugin Development</span>
+              <span class="tag">WordPress Multisite</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <h3 data-i18n="skills.db">Database & Tools</h3>
+            <div class="tags">
+              <span class="tag">MySQL</span>
+              <span class="tag">Git / GitHub</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KINH NGHIỆM -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-label reveal" data-i18n="exp.title">Kinh nghiệm</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"><i class="fa-brands fa-wordpress"></i></div>
+            <div class="glass-card">
+              <span class="time-badge">03/2025 – 10/2025</span>
+              <h3 data-i18n="exp.webo0">CÔNG TY WEBO <span class="role">WordPress Developer</span></h3>
+              <p class="team-size"><i class="fa-solid fa-users"></i> <span data-i18n="exp.team1">17 thành viên</span></p>
+              <ul class="work-list">
+                <li data-i18n-html="exp.webo1">Hỗ trợ bảo trì và phát triển tính năng mới trên nền tảng <strong>WordPress Multisite</strong> cho hệ thống webo.vn, tối ưu cấu hình quản lý nhiều website trong cùng một tài khoản.</li>
+                <li data-i18n-html="exp.webo2">Thiết kế và triển khai website theo yêu cầu khách hàng (Elementor/Flatsome), đạt hiệu suất cao về tốc độ tải trang và chuẩn Responsive đa thiết bị.</li>
+                <li data-i18n-html="exp.webo3">Phát triển <strong>plugin và module tùy chỉnh</strong>: hiển thị nội dung động, tối ưu SEO, cải thiện khả năng tương tác.</li>
+                <li data-i18n="exp.webo4">Tham gia phát triển module: hệ thống đặt dịch vụ, xác thực người dùng, quản lý tài khoản.</li>
+                <li data-i18n="exp.webo5">Hỗ trợ kiểm thử, fix bug và tối ưu hiệu năng hệ thống trước khi bàn giao.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"><i class="fa-brands fa-laravel"></i></div>
+            <div class="glass-card">
+              <span class="time-badge">09/2024 – 12/2024</span>
+              <h3 data-i18n-html="exp.dnt_title">Dự án DNTShop <span class="role">Laravel Developer</span></h3>
+              <p class="team-size"><i class="fa-solid fa-users"></i> <span data-i18n="exp.team2">05 thành viên</span></p>
+              <ul class="work-list">
+                <li data-i18n="exp.dnt1">Website thương mại điện tử cho cửa hàng quần áo. Front-end: HTML, CSS, JavaScript, Bootstrap. Back-end: Laravel, PHP. Database: MySQL.</li>
+                <li data-i18n="exp.dnt2">Thiết kế và phát triển hệ thống quản lý người dùng, sản phẩm, danh mục với CRUD và phân quyền.</li>
+                <li data-i18n="exp.dnt3">Xây dựng quy trình mua hàng và thanh toán: giỏ hàng, thanh toán, khuyến mãi, lưu lịch sử đơn hàng.</li>
+                <li data-i18n="exp.dnt4">Chức năng bình luận, đánh giá và phản hồi, tăng tương tác giữa người dùng và sản phẩm.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DỰ ÁN -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <h2 class="section-label reveal" data-i18n="projects.title">Dự án</h2>
+        <div class="projects-grid">
+          <article class="project-card featured glass-card reveal">
+            <!-- <div class="project-badge"><i class="fa-solid fa-star"></i> <span data-i18n="projects.featured">Nổi bật</span></div> -->
+            <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h3 data-i18n="projects.dnt_name">DNTShop</h3>
+            <p data-i18n="projects.dnt_desc">Trang thương mại điện tử cho cửa hàng quần áo.</p>
+            <div class="tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+            <!-- <a href="https://github.com/" target="_blank" rel="noopener" class="project-link">
+              <span data-i18n="projects.github">Xem trên GitHub</span> <i class="fa-solid fa-arrow-right"></i>
+            </a> -->
+          </article>
+          <article class="project-card glass-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-plane"></i></div>
+            <h3>websitedulich.vn</h3>
+            <p data-i18n="projects.du_lich">Website du lịch phát triển trên WordPress, tối ưu SEO và tốc độ tải trang.</p>
+            <div class="tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Elementor</span>
+            </div>
+          </article>
+          <article class="project-card glass-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-film"></i></div>
+            <h3>lkmediavietnam.com</h3>
+            <p data-i18n="projects.lkmedia">Website giới thiệu công ty truyền thông, chuẩn Responsive đa thiết bị.</p>
+            <div class="tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Flatsome</span>
+            </div>
+          </article>
+          <article class="project-card glass-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>websitedanang.vn</h3>
+            <p data-i18n="projects.danang">Website dịch vụ tại Đà Nẵng với module đặt dịch vụ và quản lý tài khoản.</p>
+            <div class="tags">
+              <span class="tag">WordPress</span>
+              <span class="tag" data-i18n="projects.tag_plugin">Plugin tùy chỉnh</span>
+            </div>
+          </article>
+          <article class="project-card glass-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-hotel"></i></div>
+            <h3>valenciahotel.com.vn</h3>
+            <p data-i18n="projects.valencia">Website khách sạn: giới thiệu dịch vụ, tra cứu phòng và hỗ trợ đặt phòng trực tuyến.</p>
+            <div class="tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Elementor</span>
+            </div>
+          </article>
+          <article class="project-card glass-card reveal">
+            <div class="project-icon"><i class="fa-solid fa-language"></i></div>
+            <h3>hoctiengnhat.davaho.vn</h3>
+            <p data-i18n="projects.nhat">Website học tiếng Nhật với quy trình xác thực người dùng và quản lý tài khoản, mua khoá học,...</p>
+            <div class="tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Multisite</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIÊN HỆ + SOCIAL -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-label reveal" data-i18n="contact.title">Liên hệ</h2>
+        <div class="contact-grid">
+          <!-- Email -->
+          <a class="contact-item glass-card reveal" href="mailto:your.duytam204@gmail.com">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span class="contact-label"><strong>Email</strong></span>
+            </div>
+          </a>
+
+          <!-- Instagram -->
+          <a class="contact-item glass-card reveal" href="https://www.instagram.com/_harry204_" target="_blank" rel="noopener">
+            <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div>
+              <span class="contact-label"><strong>Instagram</strong></span>
+            </div>
+          </a>
+
+          <!-- Facebook -->
+          <a class="contact-item glass-card reveal" href="https://www.facebook.com/duytam204" target="_blank" rel="noopener">
+            <div class="contact-icon"><i class="fa-brands fa-facebook"></i></div>
+            <div>
+              <span class="contact-label"><strong>Facebook</strong></span>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a class="contact-item glass-card reveal" href="https://linkedin.com/in/duytam204" target="_blank" rel="noopener">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <span class="contact-label"><strong>LinkedIn</strong></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+        <!-- <div class="social-section reveal">
+          <p class="social-title" data-i18n="contact.social">Kết nối với mình</p>
+          <div class="social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="mailto:duytam204@gmail.com" class="social-btn" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div> -->
+      <!-- </div>
+    </section> -->
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span>NDT</span></a>
+        <p data-i18n="footer.desc">PHP / Laravel / WordPress</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="mailto:duytam204@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©<span id="year"></span> Nguyen Duy Tam. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Về đầu trang">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
